@@ -64,6 +64,18 @@ Include files:
 
 ### Model usages
 
+   - [Define Backendless Model Class](#define-backendless-model-class)
+   - [Create an instance of Backendless Model](#create-an-instance-of-backendless-model)
+   - [Create and Save Backendless Model](#create-and-save-backendless-model)
+   - [Update Backendless Model](#update-backendless-model)
+   - [Destroy Backendless Model](#destroy-backendless-model)
+   - [Retrieving Schema Definition](#retrieving-schema-definition)
+   - [Fetch Backendless Model](#fetch-backendless-model)
+   - [Find Backendless Model by Id](#find-backendless-model-by-id)
+   - [Find the first Backendless Model](#find-the-first-backendless-model)
+   - [Find the last Backendless Model](#find-the-last-backendless-model)
+   - [Advanced Search](#advanced-search)
+   
 #### Define Backendless Model Class:
 
 ```js
@@ -275,6 +287,10 @@ or
 
 ### Collection usages
 
+   - [Define Backendless Collection Class](#define-backendless-collection-class)
+   - [Create an instance of Backendless Collection](#create-an-instance-of-backendless-collection)
+   - [Fetch Backendless Collection](#fetch-backendless-collection)
+   - [Fetch Backendless Collection with query params](#fetch-backendless-collection-with-query-params)
 
 #### Define Backendless Collection Class:
 
@@ -358,6 +374,11 @@ The same behavior as for Models, you can define the props in CollectionClass or 
 
 
 ### Relations and nested Models/Collections
+
+   - [Nested items](#nested-items)
+   - [Update nested items](#update-nested-items)
+   - [Retrieve nested items](#retrieve-nested-items)
+   - [Events](#events)
 
 A data object stored in a Backendless backend may reference other objects. These references are called relations. There are two types of relations: one-to-one and one-to-many. Relations may be declared manually in a table schema using the Backendless Console or derived (and added to schema) from the objects which are being saved. Additionally, Backendless supports bidirectional relations between the objects stored in the Data Service and other entities in a Backendless backend. For example, a data object may have a relation with a User object and/or Geo Point objects.
 
