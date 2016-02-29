@@ -3,6 +3,33 @@
 > This plugin is an extension for [Backbone.js](http://backbonejs.org/) framework and it's based on [Backendless JS SDK](https://backendless.com/mobile-developers/quick-start-guide-for-javascript/)
 > which provide you to get an easy way to use [Backendless](https://backendless.com/) with [Backbone.js](http://backbonejs.org/).</br> 
 > You can use any features and services of Backendless JS SDK, the plugin just helps you to use Backendless Data Service in your project   
+## Table of contents
+
+  - [Getting started](#getting-started)
+  - [Initialize your Backendless Application](#initialize-your-backendless-application)
+  - [Model usages](#model-usages)
+   - [Define Backendless Model Class](#define-backendless-model-class)
+   - [Create an instance of Backendless Model](#create-an-instance-of-backendless-model)
+   - [Create and Save Backendless Model](#create-and-save-backendless-model)
+   - [Update Backendless Model](#update-backendless-model)
+   - [Destroy Backendless Model](#destroy-backendless-model)
+   - [Retrieving Schema Definition](#retrieving-schema-definition)
+   - [Fetch Backendless Model](#fetch-backendless-model)
+   - [Find Backendless Model by Id](#find-backendless-model-by-id)
+   - [Find the first Backendless Model](#find-the-first-backendless-model)
+   - [Find the last Backendless Model](#find-the-last-backendless-model)
+   - [Advanced Search](#advanced-search)
+  - [Collection usages](#collection-usages)
+   - [Define Backendless Collection Class](#define-backendless-collection-class)
+   - [Create an instance of Backendless Collection](#create-an-instance-of-backendless-collection)
+   - [Fetch Backendless Collection](#fetch-backendless-collection)
+   - [Fetch Backendless Collection with query params](#fetch-backendless-collection-with-query-params)
+  - [Relations and nested Models/Collections](#relations-and-nested-modelscollections)
+   - [Nested items](#nested-items)
+   - [Update nested items](#update-nested-items)
+   - [Retrieve nested items](#retrieve-nested-items)
+   - [Events](#events)
+  
 
 ## Getting started
 
@@ -11,7 +38,7 @@ Add Backendless JS SDK into you project. </br>
 Add the plugin into you project, four quick start options are available:
 
 - [Download the latest release](https://github.com/Backendless/Backbone-SDK/archive/master.zip).
-- Clone the repository: `git clone https://github.com/Backendless/Backbone-extension.git`.
+- Clone the repository: `git clone https://github.com/Backendless/Backendless-Backbone.git`.
 - Install with [NPM](http://npmjs.org): `npm install backendless-backbone`.
 - Install with [Bower](http://bower.io): `bower install backendless-backbone`.
 
