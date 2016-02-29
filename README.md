@@ -2,7 +2,8 @@
    
 > This plugin is an extension for [Backbone.js](http://backbonejs.org/) framework and it's based on [Backendless JS SDK](https://backendless.com/mobile-developers/quick-start-guide-for-javascript/)
 > which provide you to get an easy way to use [Backendless](https://backendless.com/) with [Backbone.js](http://backbonejs.org/).</br> 
-> You can use any features and services of Backendless JS SDK, the plugin just helps you to use Backendless Data Service in your project   
+> You can use any features and services of Backendless JS SDK, the plugin just helps you to use Backendless Data Service in your project  
+
 ## Table of contents
 
   - [Getting started](#getting-started)
