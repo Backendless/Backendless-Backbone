@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backendless-Backbone SDK/Taxi cab</title>
+  <script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+  <script src="../bower_components/underscore/underscore.js" type="text/javascript"></script>
+  <script src="../bower_components/backbone/backbone.js" type="text/javascript"></script>
+  <script src="../bower_components/backendless/libs/backendless.js" type="text/javascript"></script>
+  <script src="../backendless-backbone.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+
+  var APPLICATION_ID = 'YOUR-APPLICATION-ID';
+  var JS_SECRET_KEY = 'YOUR-JS_SECRET_KEY';
+  var APPLICATION_VERSION = 'v1'; // it's default
+
+  Backendless.initApp(APPLICATION_ID, JS_SECRET_KEY, APPLICATION_VERSION);
+
+  var GeoPoint = Backbone.Model.extend({
+    schemaName: 'GeoPoint'
+  });
+
+  var TaxiCab = Backbone.Model.extend({
+
+    schemaName: 'TaxiCab',
+
+    defaults: function() {
+      return {
+        CarMake         : null,
+        CarModel        : null,
+        Location        : new GeoPoint(),
+        PreviousDropOffs: []
+      };
+    }
+  });
+
+  var geoPoint = new GeoPoint({
+    categories: ["taxi"],
+    latitude  : 40.7148,
+    longitude : -74.0059,
+    metadata  : {"service_area": "NYC"}
+  });
+
+  var dropOff1 = new GeoPoint({
+    categories: ["DropOffs"],
+    latitude  : 40.757977,
+    longitude : -73.98557,
+    metadata  : {"name": "Times Square"}
+  });
+
+  var dropOff2 = new GeoPoint({
+    categories: ["DropOffs"],
+    latitude  : 40.748379,
+    longitude : -73.985565,
+    metadata  : {"name": "Empire State Building"}
+  });
+
+  var dropOff3 = {
+    categories: ["DropOffs"],
+    latitude  : 10.748379,
+    longitude : -23.985565,
+    metadata  : {"name": "My point"}
+  };
+
+  var taxi = new TaxiCab({
+    CarMake         : 'Toyota',
+    CarModel        : 'Prius',
+    Location        : geoPoint,
+    PreviousDropOffs: [dropOff1, dropOff2]
+  });
+
+  taxi.save().done(function() {
+    console.log(taxi.toJSON());
+
+    taxi.get('Location').save({longitude: -73.985565}).done(function() {
+      console.log(taxi.toJSON());
+    });
+  });
+
+
+</script>
+</body>
+</html>

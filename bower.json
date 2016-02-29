@@ -1,0 +1,23 @@
+{
+  "name": "backendless-backbone",
+  "main": "./libs/backendless-backbone.js",
+  "keywords": [
+    "cloud",
+    "mobile",
+    "api",
+    "rest",
+    "baas",
+    "backendless",
+    "backbone"
+  ],
+  "ignore": [
+    "test",
+    "package.json",
+    ".*"
+  ],
+  "dependencies": {
+    "underscore": ">=1.7.0",
+    "backbone": ">=1.2.0",
+    "backendless": "*"
+  }
+}

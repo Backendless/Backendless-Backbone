@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backendless-Backbone SDK/Phone-book</title>
+  <script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+  <script src="../bower_components/underscore/underscore.js" type="text/javascript"></script>
+  <script src="../bower_components/backbone/backbone.js" type="text/javascript"></script>
+  <script src="../bower_components/backendless/libs/backendless.js" type="text/javascript"></script>
+  <script src="../backendless-backbone.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+
+  var APPLICATION_ID = 'YOUR-APPLICATION-ID';
+  var JS_SECRET_KEY = 'YOUR-JS_SECRET_KEY';
+  var APPLICATION_VERSION = 'v1'; // it's default
+
+  Backendless.initApp(APPLICATION_ID, JS_SECRET_KEY, APPLICATION_VERSION);
+
+  var PhoneBook = Backbone.Model.extend({
+    schemaName: 'PhoneBook',
+
+    schemaTypes: {
+      contacts: 'Contact'
+    },
+
+    defaults: function() {
+      return {
+        owner   : {},
+        contacts: []
+      };
+    }
+  });
+
+  var Contact = Backbone.Model.extend({
+    schemaName: 'Contact',
+
+    defaults: function() {
+      return {
+        name   : '',
+        age    : null,
+        phone  : '',
+        title  : '',
+        address: {}
+      };
+    }
+  });
+
+  var Contacts = Backbone.Collection.extend({
+    model: Contact
+  });
+
+  var Address = Backbone.Model.extend({
+    schemaName: 'Address',
+    defaults  : {
+      street: '',
+      city  : '',
+      state : ''
+    }
+  });
+
+  var john = new Contact({
+    name   : "John",
+    age    : 27,
+    phone  : "1-972-5551212",
+    title  : "Plumber",
+    address: new Address({
+      street: "123 Main St.",
+      city  : "Denver",
+      state : "Colorado"
+    })
+  });
+
+  var mom = new Contact({
+    name   : "Mom",
+    age    : 45,
+    phone  : "1-972-1231212",
+    title  : "Plumber",
+    address: new Address({
+      street: "123 Main St.",
+      city  : "Denver",
+      state : "Colorado"
+    })
+  });
+
+  var bob = new Contact({
+    name   : "Bob",
+    age    : 22,
+    phone  : "1-972-15527212",
+    title  : "Plumber",
+    address: new Address({
+      street: "19 Main St.",
+      city  : "Denver",
+      state : "Colorado"
+    })
+  });
+
+  var phoneBook = new PhoneBook({owner: john, contacts: new Contacts([mom, bob])});
+
+  phoneBook.save().done(function() {
+    console.log('phoneBookModel:', phoneBook);
+    console.log('phoneBookData:', phoneBook.toJSON());
+  });
+
+</script>
+</body>
+</html>
