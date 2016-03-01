@@ -1,8 +1,8 @@
 {
   "name": "backendless-backbone",
   "version": "0.1.0",
-  "description": "Extensions for Backbone.js framework for easy way to start using Backendless in your application",
-  "main": "./libs/backendless-backbone.js",
+  "description": "Extension for Backbone.js framework for easy way to start using Backendless in your application",
+  "main": "./lib/backendless-backbone.js",
   "author": "vladimir.upirov@gmail.com",
   "license": "MIT",
   "repository": {
@@ -39,11 +39,11 @@
   },
   "scripts": {
     "test": "karma start && npm run lint",
-    "lint": "eslint libs/backendless-backbone.js test/*.js",
-    "build": "uglifyjs libs/backendless-backbone.js --mangle --source-map libs/backendless-backbone-min.map -o libs/backendless-backbone-min.js"
+    "lint": "eslint lib/backendless-backbone.js test/*.js",
+    "build": "uglifyjs lib/backendless-backbone.js --mangle --source-map lib/backendless-backbone-min.map -o lib/backendless-backbone-min.js"
   },
   "files": [
-    "libs/*",
+    "lib/*",
     "LICENSE",
     "README.md",
     "examples/*"

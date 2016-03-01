@@ -14,7 +14,7 @@ module.exports = function(config) {
       'node_modules/backbone/backbone.js',
       'node_modules/backendless/libs/backendless.js',
       'node_modules/jquery-mockjax/dist/jquery.mockjax.js',
-      'libs/backendless-backbone.js',
+      'lib/backendless-backbone.js',
       'tests/setup/*.js',
       'tests/*.js'
     ],

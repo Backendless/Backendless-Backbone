@@ -1,6 +1,6 @@
 {
   "name": "backendless-backbone",
-  "main": "./libs/backendless-backbone.js",
+  "main": "./lib/backendless-backbone.js",
   "keywords": [
     "cloud",
     "mobile",
