@@ -1,6 +1,6 @@
 {
   "name": "backendless-backbone",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Extension for Backbone.js framework for easy way to start using Backendless in your application",
   "main": "./lib/backendless-backbone.js",
   "author": "vladimir.upirov@gmail.com",
