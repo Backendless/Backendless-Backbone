@@ -1,5 +1,8 @@
 ## Backendless-Backbone plugin
-   
+
+   [![Build Status](https://travis-ci.org/Backendless/Backendless-Backbone.svg?branch=master)](https://travis-ci.org/Backendless/Backendless-Backbone)
+   [![npm version](https://img.shields.io/npm/v/backendless-backbone.svg?style=flat)](https://www.npmjs.com/package/backendless-backbone)
+
 > This plugin is an extension for [Backbone.js](http://backbonejs.org/) framework and it's based on [Backendless JS SDK](https://backendless.com/mobile-developers/quick-start-guide-for-javascript/)
 > which provide you to get an easy way to use [Backendless](https://backendless.com/) with [Backbone.js](http://backbonejs.org/).</br> 
 > You can use any features and services of Backendless JS SDK, the plugin just helps you to use Backendless Data Service in your project  
